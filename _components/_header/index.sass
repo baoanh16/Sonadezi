@@ -1,0 +1,135 @@
+.cc-header
+	box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.08)
+	.container
+		position: relative
+	.logo-wrapper
+		position: absolute
+		box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.08)
+		top: 0
+		left: 15px
+		max-width: 160px
+		padding: 12px
+		background-color: white
+		img
+			width: 100%
+		@media (min-width: 992px)
+			max-width: 140px
+		@media (min-width: 1200px)
+			max-width: 160px
+	.searchbox
+		position: relative
+		padding-right: 12px
+		input
+			height: 32px
+			border: 0
+			border-bottom: 1px solid darken(white,8%)
+			font-size: r(14px)
+			color: map-get($mau, main)
+			+tr(.25)
+			&:focus
+				outline: 0
+				border-bottom-color: map-get($mau, main)
+		button
+			position: absolute
+			height: 32px
+			width: 32px
+			right: 12px
+			top: 0
+			background: none
+			border: 0
+			&:before
+				+mtrl('\f349')
+				display: block
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: r(24px)
+				color: map-get($mau, luc-1)
+	.language
+		padding: 0 10px
+		position: relative
+		z-index: 1
+		&:after
+			content: ''
+			height: 20px
+			position: absolute
+			top: 6px
+			left: 0
+			width: 100%
+			border: 0
+			border-left: 1px solid darken(white,16%)
+			border-right: 1px solid darken(white,16%)
+			z-index: 0
+		.dropdown
+			display: flex
+			flex-direction: column
+			box-shadow: 0 0 3px color-rgba(black,.25)
+			display: none
+			position: absolute
+			width: 100%
+			top: 100%
+			left: 0
+			background: white
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 5px
+				color: map-get($mau, main)
+				&:hover
+					background-color: map-get($mau, main)
+					color: white
+		.current
+			cursor: pointer
+			color: map-get($mau, main)
+			font-size: r(14px)
+			font-weight: 500
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 32px
+			position: relative
+			z-index: 2
+			span
+				margin-left: .75rem
+				&.lnr
+					font-size: 12px
+
+	.menu-wrapper
+		margin-left: auto
+		.top
+			display: flex
+			justify-content: flex-end
+		.bottom
+			.ul-wrapper
+				position: relative
+				.hoverThumb
+					transition: all .4s linear
+					position: absolute
+					height: 2px
+					background: map-get($mau, main)
+			ul
+				display: flex
+				justify-content: flex-end
+				list-style-type: none
+				padding-left: 0
+				margin-bottom: 0
+				li
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						padding: 12px .375rem 16px .375rem
+						font-size: r(14px)
+						font-weight: 400
+						color: lighten(black,20%)
+						text-transform: uppercase
+						text-decoration: none
+						@media (min-width: 1200px)
+							font-size: r(15px)
+							padding: 12px .75rem 16px .75rem
+					&:last-child
+						padding-right: 0
+					&.active,&:hover
+						a
+							color: map-get($mau, main)

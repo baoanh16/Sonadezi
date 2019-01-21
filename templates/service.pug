@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- title = 'Service'
+	- bodyClass = 'service-page'
+
+block main
+	include ../_components/banner/index.pug
+	include ../_components/service/list/index.pug

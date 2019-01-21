@@ -1,0 +1,200 @@
+.service-detail
+	padding: r(30px) 0 r(20px) 0
+	@media (min-width: 992px)
+		padding: r(80px) 0 r(40px) 0
+	.fullContent,.briefContent
+		justify-content: center
+		margin-bottom: 2rem
+		>.col-sm-10.col-lg-8
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-wrap: wrap
+			text-align: justify
+			*:not(img)
+				width: 100%
+			img
+				margin-bottom: 3.5rem
+			p
+				font-size: r(14px)!important
+				font-weight: 400!important
+				color: lighten(black,20%)!important
+			h4
+				font-size: r(18px)!important
+				font-weight: 700!important
+				color: map-get($mau, main)!important
+				text-align: center!important
+			h5
+				font-size: r(16px)!important
+				font-weight: 500!important
+				color: black!important
+				text-transform: uppercase!important
+				margin-bottom: 1.5rem
+				margin-top: 3rem
+			h6
+				font-size: r(15px)!important
+				font-weight: 500!important
+				color: map-get($mau, main)!important
+			ul
+				font-size: r(14px)!important
+				font-weight: 400!important
+				color: lighten(black,20%)!important
+				list-style-type: none
+				padding-left: 0
+				margin-bottom: 1rem
+				li
+					font-size: inherit
+					font-weight: inherit
+					color: inherit
+					&:before
+						margin: 0 .5rem 0 .75rem
+						+mtrl('\f142')
+						color: map-get($mau, main)
+						font-size: r(16px)
+	.Attributes
+		display: flex
+		flex-wrap: wrap
+		.item
+			flex: 0 0 100%
+			height: auto
+			display: flex
+			margin-bottom: 110px
+			position: relative
+			@media (min-width: 768px)
+				flex: 0 0 45%
+			&:before
+				content: ''
+				position: absolute
+				height: 110px
+				width: 1px
+				background: #cccccc
+				left: 50%
+				transform: translateX(-50%)
+				top: 100%
+			&:after
+				content: ''
+				position: absolute
+				height: 0px
+				width: 0px
+				left: 50%
+				border-left: 9px solid transparent
+				border-right: 9px solid transparent
+				border-top: 9px solid #cccccc
+				transform: translateX(-50%)
+				top: calc(100% + 100px)
+			.textbox
+				border: 1px solid darken(white,15%)
+				padding: 3rem 40px
+				border-radius: 6px
+				background-image: url('../img/service/bg_1.jpg')
+				background-repeat: repeat
+				background-size: 100% 100%
+				background-position: center
+				h5
+					font-size: r(16px)
+					font-weight: 500
+					color: map-get($mau, luc-1)
+				ul
+					padding-left: 0
+					margin-bottom: 0
+					li
+						font-size: r(13px)
+						font-weight: 300
+						margin-left: -20px
+						color: lighten(black,20%)
+						display: flex
+						line-height: 1.5
+						&:before
+							+mtrl('\f142')
+							flex: 0 0 20px
+							font-size: r(15px)
+							color: black
+							font-weight: 900
+							line-height: 19px
+	.Attributes
+		justify-content: space-between
+		&:last-child
+			.item:last-child
+				margin-bottom: 0
+				&:before
+					content: none
+				&:after
+					content: none
+		@media (min-width: 768px)
+			&:last-child
+				.item
+					margin-bottom: 0
+			&:nth-child(2n+1)
+				.item:first-child
+					&:before
+						content: ''
+						position: absolute
+						height: 1px
+						width: calc(100% / 4.5)
+						background: #cccccc
+						top: 50%
+						left: 100%
+						transform: translateY(-50%)
+					&:after
+						content: ''
+						position: absolute
+						height: 0px
+						width: 0px
+						border-top: 9px solid transparent
+						border-bottom: 9px solid transparent
+						border-left: 9px solid #cccccc
+						top: 50%
+						left: calc(100% + 22.2222% - 8px)
+						transform: translateY(-50%)
+			&:nth-child(2n+2)
+				flex-direction: row-reverse
+				.item:first-child
+					&:before
+						content: ''
+						position: absolute
+						height: 1px
+						width: calc(100% / 4.5)
+						background: #cccccc
+						top: 50%
+						left: initial
+						right: 100%
+						transform: translateY(-50%)
+					&:after
+						content: ''
+						position: absolute
+						height: 0px
+						width: 0px
+						border-top: 9px solid transparent
+						border-bottom: 9px solid transparent
+						border-right: 9px solid #cccccc
+						top: 50%
+						left: initial
+						right: calc(100% + 22.2222% - 8px)
+						transform: translateY(-50%)
+				.item:last-child
+					&:before
+						content: ''
+						position: absolute
+						height: 110px
+						width: 1px
+						background: #cccccc
+						left: 50%
+						transform: translateX(-50%)
+						top: 100%
+					&:after
+						content: ''
+						position: absolute
+						height: 0px
+						width: 0px
+						left: 50%
+						border-left: 9px solid transparent
+						border-right: 9px solid transparent
+						border-top: 9px solid #cccccc
+						transform: translateX(-50%)
+						top: calc(100% + 100px)
+			&:last-child
+				.item:last-child
+					&:before
+						content: none
+					&:after
+						content: none

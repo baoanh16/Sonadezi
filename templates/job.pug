@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- title = 'Job'
+	- bodyClass = 'job-page'
+
+block main
+	include ../_components/banner/b-2/index.pug
+	include ../_components/job/list/index.pug

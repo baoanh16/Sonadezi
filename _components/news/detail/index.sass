@@ -1,0 +1,84 @@
+.news-detail
+	padding: r(30px) 0 r(20px) 0
+	@media (min-width: 992px)
+		padding: r(80px) 0 r(40px) 0
+	.textbox
+		h1
+			font-size: r(16px)
+			font-weight: 500
+			color: map-get($mau, main)
+			margin-bottom: 1rem
+		p
+			font-size: r(14px)
+			font-weight: 300
+			color: lighten(black,20%)
+		img
+			width: 100%
+			margin-bottom: .5rem
+	.news-related
+		margin-top: 1.5rem
+		@media (min-width: 99px)
+			margin-top: 2rem
+		h3
+			font-size: r(18px)
+			font-weight: 400
+			color: map-get($mau, luc-1)
+			text-transform: uppercase
+		.item
+			text-decoration: none
+			figure
+				.imgbox
+					overflow: hidden
+					img
+						width: 100%
+				figcaption
+					h4
+						font-size: r(14px)
+						font-weight: 400
+						color: lighten(black,20%)
+	.other-news
+		margin-top: 30px
+		@media (min-width: 992px)
+			margin-top: 0
+		.other-news-title
+			background: $grad2
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 45px
+			h3
+				font-size: r(18px)
+				font-weight: 400
+				color: white
+				text-transform: uppercase
+				margin-bottom: 0
+		.list
+			.item
+				display: flex
+				padding: 1rem 0
+				border-bottom: 1px solid darken(white,15%)
+				text-decoration: none
+				figure
+					display: flex
+					flex-wrap: wrap
+					align-items: center
+					margin-bottom: 0
+					.imgbox
+						flex: 0 0 50%
+						padding-right: 14px
+					figcaption
+						flex: 0 0 50%
+						h5
+							margin-bottom: 0
+							font-size: r(13px)
+							font-weight: 400
+							color: lighten(black,20%)
+				&:hover
+					figure
+						.imgbox
+							img
+								transform: scale(1.075)
+						figcaption
+							h5
+								color: map-get($mau, main)
+								

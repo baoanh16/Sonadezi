@@ -1,0 +1,59 @@
+.job-list
+	padding: r(30px) 0 r(20px) 0
+	@media (min-width: 992px)
+		padding: r(80px) 0 r(40px) 0
+	.job-table
+		table
+			width: 100%
+			thead
+				tr
+					background: $grad2
+					th
+						font-size: r(16px)
+						font-weight: 500
+						color: white
+						text-transform: uppercase
+						padding: 12px 0
+						&:first-child
+							padding-left: 30px
+						&:nth-child(2),&:nth-child(3)
+							text-align: center
+						&:last-child
+							padding-right: 22px
+							text-align: right
+			tbody
+				tr
+					+tr(.25)
+					td
+						height: 50px
+						font-size: r(14px)
+						font-weight: 500
+						color: lighten(black,40%)
+						&:first-child
+							padding-left: 30px
+							width: 45%
+						&:nth-child(2)
+							text-align: center
+						&:nth-child(3)
+							width: 20%
+							text-align: center
+							width: 20%
+						&:last-child
+							text-align: center
+							width: 15%
+						a
+							font-size: inherit
+							font-weight: inherit
+							color: inherit
+							+tr(.25)
+					&:nth-child(odd)
+						background: darken(white,4%)
+					&:nth-child(even)
+						background: white
+					&:hover
+						transform: translateY(-7px)
+						box-shadow: 0 3px .2rem 0 color-rgba(black,.1)
+						td
+							a
+								color: map-get($mau, main)
+								

@@ -1,0 +1,128 @@
+.job-detail
+	padding: r(30px) 0 r(20px) 0
+	@media (min-width: 992px)
+		padding: r(80px) 0 r(40px) 0
+	.textbox
+		h1
+			font-size: r(20px)
+			font-weight: 400
+			color: map-get($mau, luc-1)
+			margin-bottom: .75rem
+		time
+			font-size: r(12px)
+			font-weight: 400
+			color: lighten(black,40%)
+			display: block
+		h4
+			font-size: r(16px)
+			font-weight: 400
+			color: map-get($mau, luc-1)
+			margin-top: 26px
+		p,li
+			font-size: r(14px)
+			font-weight: 400
+			color: lighten(black,40%)
+			margin-bottom: .3rem
+		li
+			display: flex
+			&:before
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: darken(white,40%)
+				content: ''
+				margin-right: 1rem
+				line-height: 21px
+				margin-top: 6px
+		ul
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+		table
+			margin-top: 2.25rem
+			tbody
+				tr
+					th
+						font-size: r(16px)
+						font-weight: 400
+						color: map-get($mau, luc-1)
+						margin-top: 26px
+						padding-right: 50px
+					td
+						font-size: r(14px)
+						font-weight: 400
+						color: lighten(black,40%)
+						
+					&:first-child
+						td
+							color: map-get($mau, do-1)
+		.apply-download
+			display: flex
+			flex-direction: column
+			margin-top: 20px
+			.download
+				font-size: r(18px)
+				font-weight: 400
+				color: map-get($mau, do-1)
+			.download
+				&:before
+					+faws('\f019',$faf,900)
+					color: map-get($mau, do-1)
+					margin-right: .5rem
+			.apply
+				margin-top: 20px
+				font-size: r(13px)
+				font-weight: 400
+				color: white
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				width: 160px
+				height: 40px
+				cursor: pointer
+				text-transform: uppercase
+				background: map-get($mau, main)
+	.other-jobs
+		margin-top: 30px
+		@media (min-width: 992px)
+			margin-top: 0
+		.other-job-title
+			background: $grad2
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 45px
+			h3
+				font-size: r(18px)
+				font-weight: 400
+				color: white
+				text-transform: uppercase
+				margin-bottom: 0
+		.list
+			.item
+				display: flex
+				flex-wrap: wrap
+				padding: 1rem 0
+				text-decoration: none
+				border-bottom: 1px solid darken(white,20%)
+				time
+					font-size: r(12px)
+					font-weight: 400
+					color: lighten(black,60%)
+					display: block
+					margin-bottom: .5rem
+					width: 100%
+					&:before
+						+mtrl('\f0f5')
+						margin-right: .1rem
+				h5 
+					font-size: r(14px)
+					font-weight: 400
+					color: lighten(black,40%)
+					margin-bottom: .3rem
+					width: 100%
+
+				&:hover
+					time,h5
+						color: map-get($mau, main)
+					

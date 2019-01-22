@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- title = 'News'
+	- bodyClass = 'news-page'
+
+block main
+	include ../_components/banner/b-2/index.pug
+	include ../_components/news/list/index.pug

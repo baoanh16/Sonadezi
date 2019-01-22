@@ -15,3 +15,28 @@ body, html
 	text-align: center
 	text-transform: uppercase
 	margin-bottom: 2rem
+
+
+@keyframes spin
+	0%
+		transform: rotate(0deg)
+	50%
+		transform: rotate(180deg)
+	100%
+		transform: rotate(360deg)
+
+.banner-icon
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	bottom: -33px
+	width: 130px
+	height: 56px
+	background-image: url('../img/banner_icon.png')
+	display: flex
+	justify-content: center
+	align-items: center
+	padding-top: 14px
+	img
+		transform: translateX(3px) translateY(6px)
+		animation: spin 7s linear infinite

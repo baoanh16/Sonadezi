@@ -93,7 +93,7 @@
 				h5
 					font-size: r(16px)
 					font-weight: 500
-					color: map-get($mau, luc-1)
+					color: map-get($mau, xanh-1)
 				ul
 					padding-left: 0
 					margin-bottom: 0
@@ -198,3 +198,25 @@
 						content: none
 					&:after
 						content: none
+	.briefContent
+		h5
+			font-size: r(16px)!important
+			font-weight: 500!important
+			color: black!important
+			text-transform: uppercase!important
+			margin-bottom: 1.5rem
+			margin-top: 3rem
+		a
+			display: flex
+			text-decoration: none
+			font-size: r(14px)
+			font-weight: 300
+			color: lighten(black,20%)
+			&:before
+				+faws('\f56d',$faf,900)
+				color: map-get($mau, main)
+				line-height: r(20px)
+				margin-right: 10px
+			&:hover
+				color: map-get($mau, main)
+				

@@ -2,5 +2,39 @@
 	position: relative
 	.tp-bannertimer
 		display: none
-
-
+	.tp-tabs
+		opacity: 1!important
+		visibility: visible!important
+		background: none!important
+		padding: 10px 0!important
+		&:before
+			background: none
+			content: none
+		.tp-tab
+			opacity: 1
+			.tp-tab-number
+				width: inherit
+				height: inherit
+				margin-right: 0
+				border: 1px solid white
+				border-radius: 50%
+				font-size: r(16px)
+				font-weight: 500
+				color: white
+				display: flex
+				justify-content: center
+				align-items: center
+				+tr(.25)
+				font-family: 'Roboto', sans-serif
+			&.selected
+				.tp-tab-number
+					background: #015198
+					border-color: #015198
+					color: white
+	.metis
+		.tp-tab-mask
+			padding-left: 0
+		&:hover 
+			.tp-tab-mask
+				padding-left: 0
+				left: 0

@@ -1,0 +1,127 @@
+.home-3
+	background: darken(white, 4%)
+	padding: r(30px) 0 1.5rem 0
+	@media (min-width: 992px)
+		padding: r(60px) 0 3rem 0
+	.home-title
+		color: lighten(black,20%)
+	.home-3-news-list
+
+		justify-content: center
+	.item
+		margin-bottom: 30px
+		a
+			text-decoration: none
+			figure
+				position: relative
+				margin: 0
+				.imgbox
+					overflow: hidden
+					img
+						width: 100%
+				time
+					width: 80px
+					height: 60px
+					position: absolute
+					top: 20px
+					left: 0
+					display: flex
+					flex-direction: column
+					padding: 0 8px
+					color: white
+					text-align: center
+					justify-content: center
+					background: color-rgba(#015198,.9)
+					.date
+						font-size: r(24px)
+						font-weight: 400
+						border-bottom: 1px solid color-rgba(white, .5)
+						
+						margin-bottom: .25rem
+						line-height: 1.25
+					.year
+						font-size: r(14px)
+						font-weight: 300
+					@media (min-width: 992px)
+				figcaption
+					padding-top: 2rem
+					text-align: center
+					font-size: r(14px)
+					font-weight: 300
+					color: lighten(black,20%)
+					h4, span
+						font-size: inherit
+						font-weight: inherit
+						color: inherit
+					h4
+						text-transform: uppercase
+						margin-bottom: 1rem
+					span
+						text-decoration: underline
+	.news-tab-list
+		.news-tab
+			padding-bottom: 0
+			ul
+				justify-content: flex-start
+				max-width: 100%
+				overflow-x: auto
+				li
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 200px
+						height: 45px
+						background: darken(white,12%)
+						font-size: r(18px)
+						font-weight: 400
+						color: lighten(black,20%)
+						text-transform: uppercase
+						cursor: pointer
+					&.active
+						position: relative
+						z-index: 1
+						box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.15)
+						a
+							background: white
+							color: #015198
+		.news-content
+			.content
+				display: flex
+				flex-wrap: wrap
+				padding: 20px
+				background: white
+				display: none
+				.item
+					flex: 0 0 100%
+					padding: 0 15px
+					margin-bottom: 20px
+					@media (min-width: 576px)
+						flex: 0 0 33.3333%
+					@media (min-width: 768px)
+						flex: 0 0 20%
+						margin-bottom: 0
+					time
+						width: 100%
+						display: block
+						font-size: r(12px)
+						font-weight: 400
+						color: darken(white,40%)
+						padding-bottom: 10px
+						border-bottom: 2px solid #015198
+						margin-bottom: 12px
+						&:before
+							+faws('\f073',$faf,900)
+							margin-right: .5rem
+					h4
+						font-size: r(14px)
+						font-weight: 300
+						color: lighten(black,20%)
+					&:hover
+						h4
+							color: map-get($mau, main)
+							
+						
+				&.show
+					display: flex!important
+					box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15)

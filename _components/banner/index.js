@@ -4,7 +4,7 @@ var Banner = {
 			sliderType: "standard",
 			sliderLayout: "auto",
 			delay: 4000,
-			gridheight: 420,
+			gridheight: 690,
 			navigation: {
 				arrows: { enable: false },
 				onHoverStop: "off",

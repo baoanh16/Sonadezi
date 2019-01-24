@@ -5,6 +5,23 @@ body, html
 	font-size: 16px
 	line-height: 1.5
 
+.home-title
+	font-size: 36px
+	color: rgb(153, 153, 153)
+	text-transform: uppercase
+	text-align: center
+	position: relative
+	font-weight: 300
+	&:before
+		content: ''
+		position: absolute
+		width: 80px
+		height: 2px
+		left: 50%
+		transform: translateX(-50%)
+		top: 100%
+		background-image: linear-gradient( 0deg, rgb(0,180,219) 0%, rgb(0,120,174) 100%)
+
 
 .main-title
 	font-size: r(32px)

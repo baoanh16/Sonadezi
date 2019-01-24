@@ -1,4 +1,4 @@
-.contact
+.contact-1
 	padding: r(60px) 0
 	.map-wrapper
 		box-shadow: 0 0 8px color-rgba(black,.15)
@@ -39,3 +39,41 @@
 				width: 100%
 				@media (min-width: 992px)
 					height: 100%
+.contact-2
+	background-image: url('../img/contact/bg_1.png')
+	background-position: center center
+	background-size: cover
+	padding: r(30px) 0
+	@media (min-width: 992px)
+		padding: r(60px) 0
+	.form-wrapper
+		h6
+			font-size: r(15px)
+			font-weight: 300
+			color: white
+			text-align: center
+			margin-bottom: .5rem
+		.form-group
+			margin-bottom: 20px
+			input
+				background-color: white
+				padding: 0 1rem
+				display: flex
+				align-items: center
+				height: 50px
+				width: 100%
+				&:placeholder
+					font-size: r(13px)
+					font-weight: 300
+					color: lighten(black,40%)
+			textarea
+				height: 180px
+				background-color: white
+				padding: 0 1rem
+				display: flex
+				align-items: center
+				width: 100%
+				&:placeholder
+					font-size: r(13px)
+					font-weight: 300
+					color: lighten(black,40%)

@@ -1,0 +1,149 @@
+.cc-footer
+	background-size: cover
+	background-position: center center
+	background-image: url('../img/footer/bg_1.jpg')
+	.top
+		padding: r(50px) 0
+		.footer-slider-wrapper
+			padding-right: 30px
+			padding-left: 30px
+			position: relative
+			.swiper-container
+				.swiper-slide
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						background: white
+						height: 100px
+			.swiper-pagination
+				width: 100%
+				left: 0
+				.swiper-button-prev,.swiper-button-next
+					background: none
+					width: 30px
+					height: 30px
+					left: unset
+					right: unset
+					font-size: r(24px)
+					transform: translateY(-50%)
+					top: 50%
+					&:before
+						width: 100%
+						height: 100%
+						color: white
+					&:focus
+						outline: none
+				.swiper-button-prev
+					left: 0
+					&:before
+						+larc('\e875')
+						display: flex
+						justify-content: center
+						align-items: center
+						
+				.swiper-button-next
+					right: 0
+					&:before
+						+larc('\e876')
+						display: flex
+						justify-content: center
+						align-items: center
+	.bottom
+		padding-bottom: r(70px)
+		h4,.module-title
+			font-size: r(16px)
+			font-weight: 400
+			color: map-get($mau, main)
+			text-transform: uppercase
+			margin-bottom: 2rem
+		p,li
+			font-size: r(14px)
+			font-weight: 400
+			color: white
+			margin-bottom: .3rem
+			opacity: .8
+		ul
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			li
+				a
+					font-size: inherit
+					font-weight: inherit
+					color: inherit
+					&:before
+						opacity: .8
+						+larc('\e87a')
+						font-size: r(13px)
+						margin-right: .6rem
+		.subscribe
+			.ModuleContent
+				position: relative
+			input
+				height: 40px
+				width: 100%
+				border: 1px solid color-rgba(white,.5)
+				border-radius: 5px
+				background: none
+				&:focus
+					outline: none
+			button
+				position: absolute
+				height: 40px
+				width: 40px
+				top: 0
+				right: 0
+				font-size: 0
+				background: none
+				border: 0
+				padding: 0
+				cursor: pointer
+				&:focus
+					outline: none
+				&:before
+					+faws('\f3fe',$fab,900)
+					font-size: r(24px)
+					color: map-get($mau, xanh-1)
+					line-height: 40px
+					width: 100%
+		.social
+			margin-top: 2rem
+			a
+				display: inline-flex
+				width: 35px
+				height: 35px
+				border: 1px solid white
+				border-radius: 50%
+				align-items: center
+				justify-content: center
+				color: white
+				opacity: .8
+				+ a
+					margin-left: 1rem
+	.copyright
+		border-top: 1px solid color-rgba(white,.8)
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		padding: 15px 0
+		span,a
+			font-size: r(13px)
+			font-weight: 400
+			color: white
+			opacity: .8
+			display: inline-flex
+			align-items: center
+		ul
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			display: inline-flex
+			align-items: center
+			li
+				display: inline-flex
+				border-right: 1px solid color-rgba(white,.8)
+				padding-right: .5rem
+				margin-right: .5rem
+				a
+					line-height: 1

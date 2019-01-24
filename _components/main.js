@@ -3,7 +3,9 @@ $(document).ready(() => {
 	Banner.HomeBanner();
 	Header.toggleLanguage();
 	Header.HeaderHover();
-	Job.toggleApplyForm();
+	Footer.init()
+	Job.init();
+	Home.init();
 });
 $(window).on('resize', function () {
 	var widthOfThumbs = $('#customHover ul li.active').innerWidth()

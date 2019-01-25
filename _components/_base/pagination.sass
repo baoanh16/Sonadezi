@@ -1,0 +1,30 @@
+.modulepager
+	margin-top: 20px
+	@media (min-width: 992px)
+		margin-top: 40px
+	.pagination
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+		li
+			width: 35px
+			height: 35px
+			// margin: 0 5px
+			&.active
+				background-image: linear-gradient(to right, rgb(34,110,172) 0%, rgb(66,155,227) 100%)
+				span,a
+					color: white
+			span,a
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				// border: 1px solid darken(white,8%)
+				height: 100%
+				font-size: r(16px)
+				font-weight: 500
+				color: #0a2653
+.product-detail-page
+	.modulepager
+		display: none

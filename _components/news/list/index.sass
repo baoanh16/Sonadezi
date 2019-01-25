@@ -1,4 +1,4 @@
-.news-list
+.news-page
 	padding: r(60px) 0
 	.news-list-wrapper
 		.item
@@ -25,9 +25,14 @@
 						font-size: r(16px)
 						font-weight: 500
 						color: map-get($mau, main)
-						+line(2)
 						max-height: 75px
 						margin-bottom: .5rem
+						a
+							+line(2)
+							font-size: inherit
+							font-weight: inherit
+							color: inherit
+							text-decoration: none
 					p
 						font-size: r(14px)
 						color: lighten(black,40%)

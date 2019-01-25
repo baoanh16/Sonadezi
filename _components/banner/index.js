@@ -1,5 +1,5 @@
 var Banner = {
-	HomeBanner: () => {
+	HomeBanner: function () {
 		$(".home-banner .rev-slider").revolution({
 			sliderType: "standard",
 			sliderLayout: "fullwidth",
@@ -28,5 +28,23 @@ var Banner = {
 				}
 			}
 		});
+	},
+	PageBanner: function () {
+		let PageBanner = new Swiper('.page-banner .swiper-container', {
+			autoplay: {
+				delay: 4500,
+				disableOnInteraction: true,
+			},
+			speed: 1000,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			loop: true,
+		})
+	},
+	init: function () {
+		this.HomeBanner();
+		this.PageBanner();
 	}
 }

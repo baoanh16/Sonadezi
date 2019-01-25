@@ -51,6 +51,7 @@
 						+larc('\e876')
 	.bottom
 		padding-bottom: r(70px)
+		padding-top: r(50px)
 		h4,.module-title
 			font-size: r(16px)
 			font-weight: 400
@@ -77,8 +78,16 @@
 						+larc('\e87a')
 						font-size: r(13px)
 						margin-right: .6rem
+		.info
+			margin-bottom: 30px
+			@media (min-width: 992px)
+				margin-bottom: 0
+		.quicklink
+			margin-bottom: 30px
+			@media (min-width: 992px)
+				margin-bottom: 0
 		.subscribe
-			.ModuleContent
+			.subscribefrm
 				position: relative
 			input
 				height: 40px
@@ -89,7 +98,7 @@
 				padding: 0 14px
 				font-size: r(12px)
 				font-weight: 400
-				color: darken(white,40%)
+				color: darken(white,15%)
 				
 				&:focus
 					outline: none

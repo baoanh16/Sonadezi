@@ -1,4 +1,4 @@
-.news-detail
+.news-page
 	padding: r(30px) 0 r(20px) 0
 	@media (min-width: 992px)
 		padding: r(80px) 0 r(40px) 0
@@ -30,7 +30,9 @@
 				.imgbox
 					overflow: hidden
 					img
+						max-width: 100%
 						width: 100%
+						+tr(.25)
 				figcaption
 					h4
 						font-size: r(14px)
@@ -66,6 +68,11 @@
 					.imgbox
 						flex: 0 0 50%
 						padding-right: 14px
+						overflow: hidden
+						img
+							max-width: 100%
+							width: 100%
+							+tr(.25)
 					figcaption
 						flex: 0 0 50%
 						h5
@@ -73,6 +80,8 @@
 							font-size: r(13px)
 							font-weight: 400
 							color: lighten(black,20%)
+							+line(3)
+							max-height: 55px
 				&:hover
 					figure
 						.imgbox

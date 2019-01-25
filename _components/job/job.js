@@ -3,7 +3,7 @@ var Job = {
 		if ($('#applyToggle').length > 0) {
 
 			$('#applyToggle').click(function () {
-				$('.job-detail .textbox .apply-form').slideToggle()
+				$('.job-page .textbox .apply-form').slideToggle()
 			})
 		}
 	},

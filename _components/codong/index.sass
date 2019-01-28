@@ -1,0 +1,69 @@
+.codong-list
+	padding: r(30px) 0
+	@media (min-width: 992px)
+		padding: r(60px) 0
+	.container
+		@media (min-width: 992px)
+			position: relative
+		.table-responsive
+			margin-top: 80px
+			border-top-left-radius: 7px
+			border-top-right-radius: 7px
+			@media (min-width: 992px)
+				margin-top: 0
+			table
+				width: 100%
+				border-collapse: collapse
+				border-top-left-radius: .5rem
+				border-top-right-radius: .5rem
+				overflow: hidden
+				thead
+					background: $grad2
+					tr
+						border-collapse: collapse
+						th
+							span
+								font-weight: 400
+								color: white
+								text-transform: uppercase
+								white-space: nowrap
+								font-size: r(14px)
+								font-weight: normal
+							&:last-child, &:nth-child(2)
+								padding: r(13.5px) 1rem
+								text-align: center
+				tbody
+					tr
+						td
+							span
+								font-size: r(12px)
+								@media (min-width: 992px)
+									font-size: r(14px)
+								// &.fas
+								// 	margin-right: 1.25rem
+								// 	@media (min-width: 992px)
+								// 		margin-right: 2rem
+							a, span
+								color: darken(white,60%)
+								text-decoration: none
+							&:not(:last-child)
+								span
+									font-weight: 500
+							&:first-child
+								padding: 1rem
+								span
+									margin-right: 1rem
+							&:nth-child(2), &:last-child
+								text-align: center
+								padding: 1rem 0
+								vertical-align: top
+							&:last-child
+								font-weight: 900
+						&:nth-child(odd)
+							background: darken(white,4%)
+						&:nth-child(even)
+							background: white
+						&:hover
+							td
+								span
+									color: color-get($mau, main)

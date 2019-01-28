@@ -1,0 +1,27 @@
+.about-4
+	padding: r(80px) 0 r(40px) 0
+	.row.no-gutters
+		@media (min-width: 992px)
+			&:nth-child(even)
+				flex-direction: row-reverse
+	.textbox
+		padding: 20px 0
+		display: flex
+		justify-content: center
+		flex-direction: column
+		height: 100%
+		@media (min-width: 992px)
+			padding: 0 45px
+		@media (min-width: 1200px)
+			padding: 30px 45px
+		p, li
+			font-size: r(16px)
+			font-weight: 300
+			color: lighten(black,20%)
+			text-align: left
+		ul
+			li
+				&:before
+					+mtrl('\f142')
+					color: map-get($mau, main)
+					font-size: r(18px)

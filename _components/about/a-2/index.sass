@@ -1,0 +1,39 @@
+.about-2
+	padding: r(80px) 0 r(40px) 0
+	.about-2-wrapper
+		p
+			font-size: r(14px)
+			font-weight: 300
+			color: lighten(black,20%)
+			text-align: center
+		.textbox
+			padding: 20px 0
+			display: flex
+			justify-content: center
+			flex-direction: column
+			height: 100%
+			@media (min-width: 992px)
+				padding: 0 45px
+			@media (min-width: 1200px)
+				padding: 30px 45px
+			h4
+				font-size: r(24px)
+				font-weight: 500
+				color: map-get($mau, main)
+				text-transform: uppercase
+				margin-bottom: 0
+			p
+				font-size: r(14px)
+				font-weight: 300
+				color: lighten(black,20%)
+				text-align: left
+		.imgbox
+			img
+				width: 100%
+		.row.no-gutters
+			justify-content: center
+			@media (min-width: 992px)
+				&:nth-child(even)
+					flex-direction: row-reverse
+			&:nth-child(2)
+				margin-bottom: 50px

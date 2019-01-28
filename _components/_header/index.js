@@ -1,16 +1,59 @@
 var Header = {
-	init: function () {
-		this.toggleLanguage();
-		this.HeaderHover();
-	},
 	toggleLanguage: () => {
 		$('.cc-header .language .current').click(function () {
 			$(this).siblings('.dropdown').slideToggle(250)
 		})
 	},
-	HeaderHover: () => {
-		if ($('#customHover').length > 0) {
+	addOverlay: (headerBreakpoint) => {
+		if (headerBreakpoint.matches) {
+			$('#wrapper').append('<div class="overlay" id="overlay"></div>')
+		} else {
+			$('.overlay').remove();
+		}
+	},
+	toggleMenuMobile: () => {
+		$('.menu-toggle-button').on('click', function () {
+			$('#overlay').fadeToggle();
+			$('.cc-header .menu-wrapper').toggleClass('open')
+			$('html').toggleClass('hide')
+		})
+		$('body').on('click', '#overlay', function () {
+			$(this).hide()
+			$('.cc-header .menu-wrapper').removeClass('open')
+			$('html').removeClass('hide')
+		})
+		$(window).resize(function () {
+			$('#overlay').hide()
+			$('.cc-header .menu-wrapper').removeClass('open')
+			$('html').removeClass('hide')
+		})
+	},
+	changeSizeLogo: () => {
+		var scrollTopPosition = 0;
+		if (window.matchMedia('(min-width: 992px)').matches === true) {
+			$(window).on('scroll', function () {
+				if ($(window).scrollTop() > scrollTopPosition) {
+					$('.logo-wrapper').addClass('scrollDown')
+					$('.menu-wrapper .top').slideUp()
+					scrollTopPosition = $(window).scrollTop()
+				} else {
+					$('.logo-wrapper').removeClass('scrollDown')
+					$('.menu-wrapper .top').slideDown()
+					scrollTopPosition = $(window).scrollTop()
 
+				}
+			})
+		}
+	},
+	HeaderHover: () => {
+		if ($('#customHover ul li.active').length === 0) {
+			$('#customHover').mouseenter(function () {
+				$('#hoverThumb').show()
+			}).mouseleave(function () {
+				$('#hoverThumb').hide()
+			})
+		}
+		if ($('#customHover').length > 0) {
 			if ($('#customHover ul li.active').length > 0) {
 				var widthOfThumbs = $('#customHover ul li.active').innerWidth()
 				$('#hoverThumb').show().width(widthOfThumbs)
@@ -52,5 +95,14 @@ var Header = {
 				})
 			})
 		}
-	}
+	},
+	init: function () {
+		this.toggleLanguage();
+		this.HeaderHover();
+		this.changeSizeLogo();
+		this.toggleMenuMobile();
+		let headerBreakpoint = matchMedia("(max-width: 991px)");
+		this.addOverlay(headerBreakpoint);
+		headerBreakpoint.addListener(this.addOverlay)
+	},
 }

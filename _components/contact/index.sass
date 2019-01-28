@@ -33,6 +33,8 @@
 			flex: 0 0 100%
 			@media (min-width: 992px)
 				flex: 0 0 calc(7.5 / 12 * 100%)
+			.ModuleContent
+				height: 100%
 			iframe
 				height: inherit
 				min-height: 420px
@@ -43,25 +45,36 @@
 	background-image: url('../img/contact/bg_1.png')
 	background-position: center center
 	background-size: cover
-	padding: r(30px) 0
+	padding: r(30px) 0 0 0
 	@media (min-width: 992px)
-		padding: r(60px) 0
+		padding: r(60px) 0 0 0
 	.form-wrapper
 		h6
 			font-size: r(15px)
 			font-weight: 300
 			color: white
 			text-align: center
-			margin-bottom: .5rem
-		.form-group
+			margin-bottom: 1.25rem
+		.form-group:not(.frm-btnwrap)
 			margin-bottom: 20px
+			.fa-exclamation-triangle
+				font-family: 'Roboto', sans-serif
+				font-weight: 300
+				color: white
+				font-size: r(11px)
+				&:before
+					content: '\f06a'
+					font-family: 'Font Awesome 5 Free'
+					color: red
+					font-weight: 900
+					font-size: r(11px)
 			input
 				background-color: white
 				padding: 0 1rem
 				display: flex
 				align-items: center
-				height: 50px
 				width: 100%
+				height: 47px
 				&:placeholder
 					font-size: r(13px)
 					font-weight: 300
@@ -77,3 +90,101 @@
 					font-size: r(13px)
 					font-weight: 300
 					color: lighten(black,40%)
+			input,textarea
+				font-size: r(13px)
+				font-weight: 300
+				color: #333
+				padding: .75rem 1rem
+				border-radius: 5px
+				border: 0
+		.captcha-wrapper
+			display: flex
+			flex-wrap: wrap
+			.frm-captcha
+				max-width: 100%
+				display: flex
+				justify-content: flex-end
+				flex-wrap: wrap
+				flex-basis: 100%
+				flex-direction: column-reverse
+				@media (min-width: 768px)
+					flex-direction: row-reverse
+					flex-grow: 1
+					flex-basis: calc(100% - 140px)
+				.frm-captcha-input
+					width: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+					@media (min-width: 768px)
+						flex: 0 0 calc(100% - 225px)
+						max-width: calc(100% - 225px)
+						align-items: flex-start
+					input
+						color: #333
+					label
+						display: none
+				.RadCaptcha.RadCaptcha_Default
+					width: initial!important
+					margin-bottom: 20px
+					display: flex
+					flex-direction: column-reverse
+					>span
+						font-family: 'Roboto', sans-serif
+						font-weight: 300
+						color: white
+						font-size: r(11px)
+						&:before
+							content: '\f06a'
+							font-family: 'Font Awesome 5 Free'
+							color: red
+							font-weight: 900
+							font-size: r(11px)
+					>div>div
+						display: flex
+						@media (min-width: 768px)
+							width: 225px
+						img
+							width: 165px!important
+							height: 47px!important
+						a
+							flex: 0 0 60px
+							font-size: 0
+							height: 47px
+							position: relative
+							&:before
+								content: ''
+								width: 100%
+								height: 100%
+								position: absolute
+								top: 0
+								left: 0
+								background-image: url("/Data/Sites/1/skins/default/img/reload_captcha.png")
+								background-position: 50%
+								background-repeat: no-repeat
+			.frm-btnwrap
+				flex: 0 0 auto
+				width: auto
+				max-width: none
+				margin: auto
+				@media (min-width: 768px)
+					max-width: 140px
+					margin: 0
+					flex: 0 0 140px
+				label
+					display: none
+				input[type="submit"]
+					margin-left: auto
+					width: 110px
+					height: 47px
+					border: 0
+					font-size: r(16px)
+					font-weight: 400
+					color: white
+					display: flex
+					justify-content: center
+					align-items: center
+					text-transform: uppercase
+					background-image: linear-gradient( 0deg, rgb(176,214,102) 0%, rgb(162,210,97) 0%, rgb(168,212,113) 0%, rgb(180,217,133) 0%, rgb(122,193,29) 0%, rgb(110,175,64) 0%, rgb(117,165,80) 0%, rgb(82,194,23) 0%, rgb(78,147,12) 0%, rgb(0,152,74) 0%, rgb(46,177,53) 100%)
+				input[type="reset"]
+					display: none

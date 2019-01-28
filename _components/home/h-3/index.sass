@@ -2,11 +2,10 @@
 	background: darken(white, 4%)
 	padding: r(30px) 0 1.5rem 0
 	@media (min-width: 992px)
-		padding: r(60px) 0 3rem 0
+		padding: r(60px) 0 r(60px) 0
 	.home-title
 		color: lighten(black,20%)
 	.home-3-news-list
-
 		justify-content: center
 	.item
 		margin-bottom: 30px
@@ -87,11 +86,14 @@
 							color: #015198
 		.news-content
 			.content
-				display: flex
-				flex-wrap: wrap
-				padding: 20px
-				background: white
 				display: none
+				.Module,.ModuleContent
+					width: 100%
+				.ModuleContent
+					display: flex
+					flex-wrap: wrap
+					padding: 20px
+					background: white
 				.item
 					flex: 0 0 100%
 					padding: 0 15px
@@ -123,5 +125,5 @@
 							
 						
 				&.show
-					display: flex!important
+					display: block
 					box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15)

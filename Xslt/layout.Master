@@ -88,6 +88,9 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 								</div>
 							</div>
 						</div>
+						<div class="menu-toggle-button">
+							<span class="mdi mdi-menu"></span>
+						</div>
 					</div>
 				</div>
 			</header>

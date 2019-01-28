@@ -8,7 +8,9 @@
 			figure
 				margin-bottom: 0
 				.imgbox
+					overflow: hidden
 					img
+						+tr(.25)
 						max-width: 100%
 						width: 100%
 				figcaption
@@ -40,6 +42,7 @@
 						height: r(40px)
 						max-height: r(60px)
 						margin-bottom: 0
+				
 			@media (min-width: 576px)
 				figure
 					display: flex
@@ -81,6 +84,12 @@
 						figcaption
 							padding: .75rem 0
 		@media (min-width: 992px)
+			.item
+				&:hover
+					figure
+						.imgbox
+							img
+								transform: scale(1.1)
 			.big
 				.item
 					figure

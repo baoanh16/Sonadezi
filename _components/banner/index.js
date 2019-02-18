@@ -1,33 +1,25 @@
 var Banner = {
 	HomeBanner: function () {
-		$(".home-banner .rev-slider").revolution({
-			sliderType: "standard",
-			sliderLayout: "fullwidth",
-			responsiveLevels: [0, 576, 768, 992, 1200],
-			gridheight: [690, 615, 565, 490, 0],
-			delay: 4000,
-			navigation: {
-				arrows: { enable: false },
-				onHoverStop: "off",
+		let PageBanner = new Swiper('.home-banner .swiper-container', {
+			autoplay: {
+				delay: 4500,
+				disableOnInteraction: true,
 			},
-			navigation: {
-				tabs: {
-					enable: true,
-					style: 'metis',
-					width: 40,
-					height: 40,
-					direction: 'vertical',
-					span: true,
-					space: 15,
-					h_align: "right",
-					v_align: "center",
-					h_offset: ($(window).width() - $('.container').width()) / 2,
-					v_offset: 30,
-					tmp:
-						`<div class="tp-tab-number">{{param1}}</div>`,
-				}
-			}
-		});
+			speed: 1000,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 30,
+				slideShadows: false,
+			},
+			loop: true,
+			pagination: {
+				el: '.home-banner .swiper-pagination',
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + '</span>';
+				},
+			},
+		})
 	},
 	PageBanner: function () {
 		let PageBanner = new Swiper('.page-banner .swiper-container', {

@@ -17,6 +17,7 @@
 		</div>
 		<div class="row briefContent">
 			<div class="col-sm-10 col-lg-8">
+				<h5>Tải tài liệu:</h5>
 				<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 			</div>
 		</div>

@@ -28,7 +28,7 @@
 					<xsl:attribute name="href">
 						<xsl:value-of select="FileUrl" disable-output-escaping="yes"></xsl:value-of>
 					</xsl:attribute>
-					<span><xsl:value-of select="Position()" disable-output-escaping="yes"></xsl:value-of></span>
+					<span><xsl:value-of select="position()" disable-output-escaping="yes"></xsl:value-of></span>
 					<span>
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</span>

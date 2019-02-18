@@ -9,6 +9,7 @@ html
 	@media (max-width: 991px)
 		&.hide
 			overflow: hidden
+			
 .home-title
 	font-size: 36px
 	color: rgb(153, 153, 153)
@@ -25,14 +26,14 @@ html
 		left: 50%
 		transform: translateX(-50%)
 		top: 100%
-		background-image: linear-gradient( 0deg, rgb(0,180,219) 0%, rgb(0,120,174) 100%)
+		background-image: linear-gradient( 90deg, rgb(0,180,219) 0%, rgb(0,120,174) 100%)
 ul
 	list-style-type: none
 	padding-left: 0
 	margin-bottom: 0
 
 .main-title
-	font-size: r(32px)
+	font-size: r(24px)
 	font-weight: 500
 	background: linear-gradient(to right, #007105 0%, #67b110 100%)
 	-webkit-background-clip: text
@@ -40,7 +41,8 @@ ul
 	text-align: center
 	text-transform: uppercase
 	margin-bottom: 2rem
-
+	@media (min-width: 992px)
+		font-size: r(32px)
 
 @keyframes spin
 	0%
@@ -75,6 +77,8 @@ ul
 		margin-bottom: 0
 		padding-left: 0
 		list-style-type: none
+		@media (min-width: 992px)
+			display: flex!important
 		li
 			a
 				padding: 0 1rem
@@ -88,6 +92,33 @@ ul
 				a
 					text-decoration: none
 					color: map-get($mau, main)
+		@media (max-width: 991px)
+			display: none
+			background: rgba(66, 155, 227,.3)
+			li
+				min-height: 35px
+				display: flex
+				justify-content: left
+				align-items: center
+				+ li
+					border-left: 0
+	.news-nav-mobile
+		display: flex
+		justify-content: center
+		align-items: center
+		background: $grad2
+		min-height: 45px
+		@media (min-width: 992px)
+			display: none
+		h4
+			font-size: r(16px)
+			font-weight: 500
+			color: white
+			text-transform: uppercase
+			margin-bottom: 0
+			&:after
+				margin-left: .75rem
+				+larc('\e874')
 .altcontent1
 	padding-top: 40px
 	@media (min-width: 992px)

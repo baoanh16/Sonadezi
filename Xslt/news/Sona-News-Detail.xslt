@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt"
- exclude-result-prefixes="msxsl">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
 		<section class="news-page">
@@ -10,10 +10,36 @@
 						<div class="textbox">
 							<h1>
 								<xsl:value-of select="/NewsDetail/Title" disable-output-escaping="yes"></xsl:value-of>
-								<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
+								<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes">
+								</xsl:value-of>
 							</h1>
-							<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
+							<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes">
+							</xsl:value-of>
 							<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
+							<div class="social-networks nav" style="display: flex;">
+								<div class="nav-item">
+									<div class="fb-share-button" data-href="" data-layout="button" data-size="small"
+										data-mobile-iframe="true">
+										<a class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ
+										</a>
+									</div>
+								</div>
+								<div class="nav-item">
+									<a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
+										data-text="custom share text" data-url="" data-via="twitterdev"
+										data-related="twitterapi,twitter">Tweet
+									</a>
+								</div>
+								<div class="nav-item">
+									<div class="g-plusone" data-size="tall">
+									</div>
+								</div>
+								<div class="nav-item">
+									<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US
+									</script>
+									<script type="IN/Share"></script>
+								</div>
+							</div>
 						</div>
 						<div class="news-related">
 							<xsl:if test="count(/NewsDetail/NewsRelated)>0">

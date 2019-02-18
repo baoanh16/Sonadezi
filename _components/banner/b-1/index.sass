@@ -1,50 +1,71 @@
 .home-banner
 	position: relative
-	.tp-bgimg
-		position: relative
-		&:before
-			position: absolute
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
-			top: 0
-			left: 0
-			widows: 100%
-			height: 100%
-			content: ''
-	.tp-bannertimer
-		display: none
-	.tp-tabs
-		opacity: 1!important
-		visibility: visible!important
-		background: none!important
-		padding: 10px 0!important
-		&:before
-			background: none
-			content: none
-		.tp-tab
-			opacity: 1
-			.tp-tab-number
-				width: inherit
-				height: inherit
-				margin-right: 0
-				border: 1px solid white
-				border-radius: 50%
-				font-size: r(16px)
+	.swiper-container
+		.swiper-slide
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: linear-gradient(0deg,rgba(0,0,0,.5) 5%, rgba(0,0,0,0) 60%)
+			a
+				height: 320px
+				background-position: center center
+				background-size: cover
+				background-repeat: no-repeat
+				display: block
+				img
+					display: none
+				@media (min-width: 768px)
+					height: 400px
+				@media (min-width: 992px)
+					height: unset
+					img
+						opacity: 0
+						display: block
+			.caption
+				color: white
+				text-transform: uppercase
+				position: absolute
+				bottom: 10%
+				text-align: center
+				left: 50%
+				transform: translateX(-50%)
 				font-weight: 500
+				font-size: r(18px)
+				width: 100%
+				@media (min-width: 768px)
+					font-size: r(22px)
+					padding: 0 15%
+				@media (min-width: 1200px)
+					font-size: r(30px)
+					padding: 0 25%
+		.swiper-pagination
+			display: flex
+			flex-direction: column
+			left: 50%
+			transform: translateX(-50%)
+			bottom: 0
+			height: 100%
+			justify-content: center
+			align-items: flex-end
+			.swiper-pagination-bullet
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				border: 1px solid white
 				color: white
 				display: flex
 				justify-content: center
 				align-items: center
-				+tr(.25)
-				font-family: 'Roboto', sans-serif
-			&.selected
-				.tp-tab-number
-					background: #015198
+				font-size: r(16px)
+				background: none
+				opacity: 1
+				margin: 8px 0
+				+tr(.3)
+				&.swiper-pagination-bullet-active
 					border-color: #015198
-					color: white
-	.metis
-		.tp-tab-mask
-			padding-left: 0
-		&:hover 
-			.tp-tab-mask
-				padding-left: 0
-				left: 0
+					background: #015198

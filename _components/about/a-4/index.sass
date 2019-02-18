@@ -1,5 +1,14 @@
 .about-4
-	padding: r(80px) 0 r(40px) 0
+	padding: r(80px) 0 0 0
+	img
+		width: 100%
+	.about-3-wrapper
+		padding-bottom: 40px
+	.Module-174
+		ul
+			li
+				a
+					text-transform: uppercase
 	.row.no-gutters
 		@media (min-width: 992px)
 			&:nth-child(even)
@@ -10,7 +19,9 @@
 		justify-content: center
 		flex-direction: column
 		height: 100%
+		text-align: justify
 		@media (min-width: 992px)
+			text-align: left
 			padding: 0 45px
 		@media (min-width: 1200px)
 			padding: 30px 45px
@@ -18,7 +29,10 @@
 			font-size: r(16px)
 			font-weight: 300
 			color: lighten(black,20%)
-			text-align: left
+			margin-bottom: .75rem
+			text-align: justify
+			@media (min-width: 992px)
+				text-align: left
 		ul
 			li
 				&:before

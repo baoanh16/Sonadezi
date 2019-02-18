@@ -99,8 +99,9 @@
 				padding: 0 14px
 				font-size: r(12px)
 				font-weight: 400
-				color: darken(white,15%)
-				
+				color: white
+				&::placeholder
+					color: white
 				&:focus
 					outline: none
 			button
@@ -134,8 +135,13 @@
 				justify-content: center
 				color: white
 				opacity: .8
+				+tr(.25)
 				+ a
 					margin-left: 1rem
+				&:hover
+					text-decoration: none
+					color: map-get($mau, xanh-1)
+					border-color: map-get($mau, xanh-1)
 	.copyright
 		border-top: 1px solid color-rgba(white,.8)
 		display: flex

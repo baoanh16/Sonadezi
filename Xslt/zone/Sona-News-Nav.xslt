@@ -3,9 +3,17 @@
 <xsl:output method="html" indent="yes"/>
 
 	<xsl:template match="/">
-		<ul>
+		<div class="news-nav-mobile">
+			<h4><xsl:value-of select="/ZoneList/Title" disable-output-escaping="yes"></xsl:value-of></h4>
+		</div>
+		<ul id="nav">
 			<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 		</ul>
+		<script>
+			$('.news-nav-mobile').click(function(){
+				$('#nav').slideToggle()
+			})
+		</script>
 	</xsl:template>
 
 	<xsl:template match="Zone">

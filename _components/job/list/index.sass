@@ -3,6 +3,10 @@
 	@media (min-width: 992px)
 		padding: 5rem 0 r(40px) 0
 	.job-table
+		display: block
+		width: 100%
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
 		table
 			width: 100%
 			thead
@@ -13,7 +17,8 @@
 						font-weight: 500
 						color: white
 						text-transform: uppercase
-						padding: 12px 0
+						padding: 12px 20px
+						white-space: nowrap
 						&:first-child
 							padding-left: 30px
 						&:nth-child(2),&:nth-child(3)

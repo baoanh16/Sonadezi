@@ -19,6 +19,8 @@ $(document).ready(() => {
 		$('.Module-138 ul li:nth-child(6)').addClass('active')
 		Header.HeaderHover()
 	}
+
+	$('.Module-141 ul li:nth-child(4), .Module-141 ul li:nth-child(6)').children('a').attr('target', '_blank')
 });
 $(window).on('resize', function () {
 	if ($('#customHover ul li.active').length > 0) {

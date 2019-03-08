@@ -23,12 +23,20 @@
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:attribute name="style">
+				<!-- <xsl:attribute name="style">
 					<xsl:text>background-image: url("</xsl:text>
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 					<xsl:text>")</xsl:text>
+				</xsl:attribute> -->
+				<img class="mobile">
+				<xsl:attribute name="src">
+					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 				</xsl:attribute>
-				<img>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				</img>
+				<img class="desktop">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>

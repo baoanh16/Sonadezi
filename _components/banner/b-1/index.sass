@@ -12,20 +12,28 @@
 				height: 100%
 				background: linear-gradient(0deg,rgba(0,0,0,.5) 5%, rgba(0,0,0,0) 60%)
 			a
-				height: 320px
-				background-position: center center
-				background-size: cover
-				background-repeat: no-repeat
+				// height: 320px
+				// background-position: center center
+				// background-size: cover
+				// background-repeat: no-repeat
 				display: block
 				img
-					display: none
-				@media (min-width: 768px)
-					height: 400px
-				@media (min-width: 992px)
-					height: unset
-					img
-						opacity: 0
+					width: 100%
+					&.desktop
+						display: none
+					&.mobile
 						display: block
+				// @media (min-width: 768px)
+				// 	height: 400px
+				@media (min-width: 992px)
+					img
+						&.desktop
+							display: block
+						&.mobile
+							display: none
+					// img
+					// 	opacity: 0
+					// 	display: block
 			.caption
 				color: white
 				text-transform: uppercase
@@ -52,6 +60,8 @@
 			height: 100%
 			justify-content: center
 			align-items: flex-end
+			@media (max-width: 767.9px)
+				display: none
 			.swiper-pagination-bullet
 				width: 40px
 				height: 40px

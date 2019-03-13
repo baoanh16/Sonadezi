@@ -154,6 +154,8 @@
 						img
 							width: 165px!important
 							height: 47px!important
+							@media (max-width: 767.9px)
+								flex-grow: 1
 						a
 							flex: 0 0 60px
 							font-size: 0
@@ -170,9 +172,9 @@
 								background-position: 50%
 								background-repeat: no-repeat
 			.frm-btnwrap
-				flex: 0 0 auto
-				width: auto
-				max-width: none
+				flex: 0 0 100%
+				width: 100%
+				max-width: 100%
 				margin: auto
 				@media (min-width: 768px)
 					max-width: 140px
@@ -194,5 +196,7 @@
 					text-align: center
 					text-transform: uppercase
 					background-image: linear-gradient( 0deg, rgb(176,214,102) 0%, rgb(162,210,97) 0%, rgb(168,212,113) 0%, rgb(180,217,133) 0%, rgb(122,193,29) 0%, rgb(110,175,64) 0%, rgb(117,165,80) 0%, rgb(82,194,23) 0%, rgb(78,147,12) 0%, rgb(0,152,74) 0%, rgb(46,177,53) 100%)
+					@media (max-width: 767.9px)
+						width: 100%
 				input[type="reset"]
 					display: none

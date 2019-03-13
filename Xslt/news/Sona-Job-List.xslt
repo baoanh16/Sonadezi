@@ -11,10 +11,10 @@
 				<table>
 					<thead class="thead">
 						<tr>
-							<th>Vị trí ứng tuyển</th>
-							<th>Số lượng ứng tuyển</th>
-							<th>Địa điểm</th>
-							<th>Hạn nộp hồ sơ</th>
+							<th><xsl:value-of select="/NewsList/NomineeText" disable-output-escaping="yes"></xsl:value-of></th>
+							<th><xsl:value-of select="/NewsList/NumberApplicationText" disable-output-escaping="yes"></xsl:value-of></th>
+							<th><xsl:value-of select="/NewsList/LocationText" disable-output-escaping="yes"></xsl:value-of></th>
+							<th><xsl:value-of select="/NewsList/DeadlineText" disable-output-escaping="yes"></xsl:value-of></th>
 						</tr>
 					</thead>
 					<tbody class="tbody">

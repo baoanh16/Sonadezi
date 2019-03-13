@@ -1,5 +1,10 @@
 // viết script, gọi function ở đây
-$(document).ready(() => {
+$(document).ready(function () {
+	$('.news-detail-page img').each(function (e) {
+		if ($('img')[e].naturalWidth === 0) {
+			$($('img')[e]).hide()
+		}
+	})
 	Banner.init();
 	Header.init();
 	Footer.init();
@@ -21,6 +26,7 @@ $(document).ready(() => {
 	}
 
 	$('.Module-141 ul li:nth-child(4), .Module-141 ul li:nth-child(6)').children('a').attr('target', '_blank')
+	
 });
 $(window).on('resize', function () {
 	if ($('#customHover ul li.active').length > 0) {

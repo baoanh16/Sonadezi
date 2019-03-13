@@ -143,7 +143,10 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 							<ul>
 								<li><a href="#">Điều khoản sử dụng</a></li>
 								<li><a href="/sitemap.aspx">Sitemap</a></li>
-							</ul><span>2018 Sonadezi SDV. All rights reserved. Designed by <a href="https://canhcam.vn">Canh Cam</a></span>
+							</ul>
+							<p>
+								<span>2018 Sonadezi SDV. All rights reserved.</span><span>Designed by <a href="https://canhcam.vn">Canh Cam</a></span>
+							</p>
 						</div>
 					</div>
 				</div>

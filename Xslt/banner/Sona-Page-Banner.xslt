@@ -20,7 +20,15 @@
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
-				<img>
+				<img class="mobile">
+				<xsl:attribute name="src">
+					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				</img>
+				<img class="desktop">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>

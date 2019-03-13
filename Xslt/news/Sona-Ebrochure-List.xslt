@@ -11,8 +11,8 @@
 				<thead>
 					<tr>
 						<th></th>
-						<th><span>Ngày đăng</span></th>
-						<th><span>Tải về</span></th>
+						<th><span><xsl:value-of select="/NewsList/DateText" disable-output-escaping="yes"></xsl:value-of></span></th>
+						<th><span><xsl:value-of select="/NewsList/DownloadText" disable-output-escaping="yes"></xsl:value-of></span></th>
 					</tr>
 				</thead>
 				<tbody>

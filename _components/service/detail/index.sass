@@ -62,12 +62,14 @@
 		flex-wrap: wrap
 		.item
 			flex: 0 0 100%
+			max-width: 100%
 			height: auto
-			display: flex
+			display: block
 			margin-bottom: 110px
 			position: relative
 			@media (min-width: 768px)
 				flex: 0 0 45%
+				max-width: 45%
 			&:before
 				content: ''
 				position: absolute
@@ -96,6 +98,7 @@
 				background-repeat: repeat
 				background-size: 100% 100%
 				background-position: center
+				height: 100%
 				h5
 					font-size: r(16px)
 					font-weight: 500
@@ -136,7 +139,7 @@
 						content: ''
 						position: absolute
 						height: 1px
-						width: calc(100% / 4.5)
+						width: 22.2222%
 						background: #cccccc
 						top: 50%
 						left: 100%
@@ -150,7 +153,8 @@
 						border-bottom: 9px solid transparent
 						border-left: 9px solid #cccccc
 						top: 50%
-						left: calc(100% + 22.2222% - 8px)
+						left: 122.2222%
+						margin-left: -8px
 						transform: translateY(-50%)
 			&:nth-child(2n+2)
 				flex-direction: row-reverse
@@ -159,10 +163,10 @@
 						content: ''
 						position: absolute
 						height: 1px
-						width: calc(100% / 4.5)
+						width: 22.2222%
 						background: #cccccc
 						top: 50%
-						left: initial
+						left: auto
 						right: 100%
 						transform: translateY(-50%)
 					&:after
@@ -174,8 +178,9 @@
 						border-bottom: 9px solid transparent
 						border-right: 9px solid #cccccc
 						top: 50%
-						left: initial
-						right: calc(100% + 22.2222% - 8px)
+						left: auto
+						right: 122.2222%
+						margin-right: -8px
 						transform: translateY(-50%)
 				.item:last-child
 					&:before
@@ -197,7 +202,7 @@
 						border-right: 9px solid transparent
 						border-top: 9px solid #cccccc
 						transform: translateX(-50%)
-						top: calc(100% + 100px)
+						bottom: -100px
 			&:last-child
 				.item:last-child
 					&:before

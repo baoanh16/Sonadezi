@@ -8,6 +8,7 @@
 			figure
 				margin-bottom: 0
 				overflow: hidden
+				width: 100%
 				.imgbox
 					overflow: hidden
 					img
@@ -49,16 +50,20 @@
 					display: flex
 					.imgbox
 						flex: 0 0 60%
+						max-width: 60%
 					figcaption
 						flex: 0 0 40%
+						max-width: 40%
 						padding-left: .5rem
 			@media (min-width: 768px)
 				figure
 					flex-wrap: wrap
 					.imgbox
 						flex: 0 0 100%
+						max-width: 100%
 					figcaption
 						flex: 0 0 100%
+						max-width: 100%
 		@media (min-width: 768px)
 			.big
 				.item
@@ -74,7 +79,8 @@
 				display: flex
 				padding: 0
 				.item
-					flex: 0 0 50%
+					flex: 0 0 100%
+					max-width: 100%
 					padding: 0 15px
 					figure
 						figcaption
@@ -110,11 +116,13 @@
 					figure
 						.imgbox
 							flex: 0 0 60%
+							max-width: 60%
 							img
 								height: 100%
 								object-fit: cover
 						figcaption
 							flex: 0 0 40%
+							max-width: 40%
 							padding: 0 0 0 .5rem
 							h5
 								+line(3)

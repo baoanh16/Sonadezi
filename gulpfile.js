@@ -66,7 +66,7 @@ gulp.task('css', function () {
 		.pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
 		.pipe(postcss([
 			prefixer({
-				browsers: ['last 4 version', "IE 10"],
+				browsers: ['last 4 version', "IE 9"],
 				cascade: false,
 			}),
 			cssnano(),
@@ -84,9 +84,9 @@ gulp.task('scripts', function () {
 	return gulp.src('./_components/**/**.js')
 		.pipe(srcmap.init())
 		.pipe(concat('main.min.js'))
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
+		// .pipe(babel({
+		// 	presets: ['@babel/env']
+		// }))
 		.pipe(uglify())
 		.pipe(srcmap.write('./.'))
 		.pipe(gulp.dest('./dist/js'))

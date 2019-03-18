@@ -71,9 +71,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 				<div class="container">
 					<div class="row no-gutters">
 						<div class="logo-wrapper">
-							<a href="/">
-								<portal:SiteLogo ID="SiteLogo1" runat="server" />
-							</a>
+							<portal:SiteLogo ID="SiteLogo1" runat="server" />
 						</div>
 						<div class="menu-wrapper">
 							<div class="top">
@@ -140,10 +138,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 					</div>
 					<div class="row no-gutters">
 						<div class="col-12 copyright">
-							<ul>
-								<li><a href="#">Điều khoản sử dụng</a></li>
-								<li><a href="/sitemap.aspx">Sitemap</a></li>
-							</ul>
+							
+							<portal:modulewrapper id="mdl188" runat="server" configuremoduleid="188" />
 							<p>
 								<span>2018 Sonadezi SDV. All rights reserved.</span><span>Designed by <a href="https://canhcam.vn">Canh Cam</a></span>
 							</p>

@@ -35,7 +35,8 @@ ul
 .main-title
 	font-size: r(24px)
 	font-weight: 500
-	background: linear-gradient(to right, #007105 0%, #67b110 100%)
+	background: rgb(0,113,5)
+	background: linear-gradient(90deg, rgba(0,113,5,1) 0%, rgba(103,177,16,1) 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	text-align: center
@@ -43,6 +44,9 @@ ul
 	margin-bottom: 2rem
 	@media (min-width: 992px)
 		font-size: r(32px)
+	@media all and (-ms-high-contrast: none),(-ms-high-contrast: active)
+		color: rgb(0,113,5)
+		background: transparent
 
 @keyframes spin
 	0%
@@ -134,3 +138,7 @@ ul
 .desktop
 	@media (max-width: 992px)
 		display: none
+.cmsadminpanel
+	width: 100%
+	>.row
+		margin: 0 0

@@ -58,18 +58,17 @@
 				margin-bottom: 0
 		.list
 			.item
-				display: flex
-				padding: 1rem 0
-				border-bottom: 1px solid darken(white,15%)
 				text-decoration: none
 				figure
+					padding: 1rem 0
+					border-bottom: 1px solid darken(white,15%)
 					display: flex
 					flex-wrap: wrap
 					align-items: center
 					margin-bottom: 0
 					.imgbox
 						flex: 0 0 50%
-						padding-right: 14px
+						max-width: 50%
 						overflow: hidden
 						img
 							max-width: 100%
@@ -77,6 +76,8 @@
 							+tr(.25)
 					figcaption
 						flex: 0 0 50%
+						max-width: 50%
+						padding-left: 14px
 						h5
 							margin-bottom: 0
 							font-size: r(13px)

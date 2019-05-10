@@ -3,6 +3,12 @@
 	.swiper-container
 		.swiper-slide
 			position: relative
+			video
+				width: 100%
+				object-fit: cover
+			&.video
+				&:before
+					content: none
 			&:before
 				content: ''
 				position: absolute

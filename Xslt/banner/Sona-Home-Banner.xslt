@@ -7,6 +7,9 @@
 		<div class="home-banner">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
+					<div class="swiper-slide video">
+						<video autoplay="" muted="" src="/Data/Sites/1/media/video.mp4"></video>
+					</div>
 					<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 				</div>
 				<div class="swiper-pagination container"></div>

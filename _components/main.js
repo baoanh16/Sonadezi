@@ -6,16 +6,7 @@ $(document).ready(function () {
 		}
 	})
 	var PageBanner = new Swiper('.home-banner .swiper-container', {
-		autoplay: {
-			delay: 4500,
-			disableOnInteraction: true,
-		},
-		speed: 1000,
-		effect: 'coverflow',
-		coverflowEffect: {
-			rotate: 30,
-			slideShadows: false,
-		},
+		speed: 1200,
 		loop: true,
 		pagination: {
 			el: '.home-banner .swiper-pagination',
@@ -24,7 +15,39 @@ $(document).ready(function () {
 				return '<span class="' + className + '">' + (index + 1) + '</span>';
 			},
 		},
+		on: {
+			init: function () {
+				$('.home-banner .swiper-slide.video').height($('.home-banner .swiper-slide img').height())
+				if (this.realIndex === 0) {
+					setTimeout(function () {
+						$('.home-banner .swiper-next-button').trigger('click');
+						setInterval(function () {
+							$('.home-banner .swiper-next-button').trigger('click');
+						}, 5000)
+					}, 17000);
+				} else {
+					setInterval(function () {
+						$('.home-banner .swiper-next-button').trigger('click');
+					}, 5000)
+				}
+			}
+		}
 	})
+
+	var vid = $('.home-banner .swiper-slide video')
+	swiper.on('slideChange', function () {
+		if (swiper.activeIndex == 0) {
+			vid.get(0).play()
+		} else {
+			vid.get(0).pause()
+		}
+	});
+	vid.onplay = function () {
+		swiper.autoplay.stop()
+	};
+	vid.onended = function () {
+		swiper.autoplay.start()
+	};
 	var PageBanner = new Swiper('.page-banner .swiper-container', {
 		autoplay: {
 			delay: 4500,
@@ -84,7 +107,7 @@ $(document).ready(function () {
 			}
 		})
 	}
-	function HeaderHover(){
+	function HeaderHover() {
 		if ($('#customHover ul li.active').length === 0) {
 			$('#customHover').mouseenter(function () {
 				$('#hoverThumb').show()
@@ -114,7 +137,7 @@ $(document).ready(function () {
 			}).mouseleave(function () {
 				// tra ve vi tri cu 
 				if ($('#customHover ul li.active').length > 0) {
-	
+
 					let positionOfThumb = $('#customHover ul li.active').offset().left - $('#customHover').offset().left
 					let widthOfThumbs = $('#customHover ul li.active').innerWidth()
 					$('#hoverThumb').css({
@@ -135,7 +158,7 @@ $(document).ready(function () {
 			})
 		})
 	}
-	
+
 
 	var footerSlider = new Swiper('.cc-footer .swiper-container', {
 		spaceBetween: 20,

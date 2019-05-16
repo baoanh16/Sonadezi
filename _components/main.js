@@ -5,7 +5,7 @@ $(document).ready(function () {
 			$($('img')[e]).hide()
 		}
 	})
-	var PageBanner = new Swiper('.home-banner .swiper-container', {
+	var HomeBanner = new Swiper('.home-banner .swiper-container', {
 		speed: 1200,
 		loop: true,
 		pagination: {
@@ -35,18 +35,18 @@ $(document).ready(function () {
 	})
 
 	var vid = $('.home-banner .swiper-slide video')
-	swiper.on('slideChange', function () {
-		if (swiper.activeIndex == 0) {
+	HomeBanner.on('slideChange', function () {
+		if (HomeBanner.activeIndex == 0) {
 			vid.get(0).play()
 		} else {
 			vid.get(0).pause()
 		}
 	});
 	vid.onplay = function () {
-		swiper.autoplay.stop()
+		HomeBanner.autoplay.stop()
 	};
 	vid.onended = function () {
-		swiper.autoplay.start()
+		HomeBanner.autoplay.start()
 	};
 	var PageBanner = new Swiper('.page-banner .swiper-container', {
 		autoplay: {

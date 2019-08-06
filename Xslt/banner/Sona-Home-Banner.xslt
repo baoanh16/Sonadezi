@@ -17,6 +17,7 @@
 			<div class="banner-icon">
 				<img src="/Data/Sites/1/skins/default/img/banner_icon_2.png" alt="" />
 			</div>
+			<div class="swiper-next-button"></div>
 		</div>
 	</xsl:template>
 

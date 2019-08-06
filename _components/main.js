@@ -7,6 +7,10 @@ $(document).ready(function () {
 	})
 	var HomeBanner = new Swiper('.home-banner .swiper-container', {
 		speed: 1200,
+		navigation: {
+			nextEl: '.home-banner .swiper-next-button',
+			prevEl: '.home-banner .swiper-button-prev',
+		},
 		loop: true,
 		pagination: {
 			el: '.home-banner .swiper-pagination',
